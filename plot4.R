@@ -29,8 +29,8 @@ with(electData, {
         }
      )
 axis(1, at=c(0, 1440, 2880), labels=c('Thu','Fri','Sat'))
-legend(x=1500,y=35, col=c('black','red','blue'), cex=0.75, y.intersp=0.25, x.intersp=0.25,
-       xjust=1, legend=c('Sub_metering_1','Sub_metering_2','Sub_metering_3'),lty=1)
+legend('topright', col=c('black','red','blue'), cex=0.5, y.intersp=0.25,
+       bty='n', legend=c('Sub_metering_1','Sub_metering_2','Sub_metering_3'),lty=1)
 
 with(electData, plot(Global_reactive_power, type='n', xaxt='n', ann=F))
 with(electData, lines(Global_reactive_power))
@@ -38,6 +38,6 @@ axis(1, at=c(0, 1440, 2880), labels=c('Thu','Fri','Sat'))
 title(xlab='datetime', ylab='Global_reactive_power')
 
 # save to png file
-#dev.copy(png, 'plot4.png')
-#dev.off()
+dev.copy(png, 'plot4.png')
+dev.off()
 
